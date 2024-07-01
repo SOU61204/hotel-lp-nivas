@@ -1,0 +1,19 @@
+body
+{
+    background: url("../images/background/home-background-image-1.jpg") no-repeat center center fixed;
+                /*url("../images/background/home-background-image-2.jpg");*/
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: cover;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: 15s ease-in-out;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

@@ -1,0 +1,133 @@
+.contact-heading
+{
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.65);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.contact-section
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.65);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-text-container
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: middle;
+    margin-left: 10px;
+}
+.contact-details
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.contact-text-heading
+{
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+.contact-text
+{
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+.contact-image-container
+{
+    width: 50%;
+}
+.contact-image
+{
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 500px)
+{
+    .contact-section
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .contact-text-container
+    {
+        width: 100%;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .contact-text-heading
+    {
+        font-size: 20px;
+        padding-bottom: 3px;
+    }
+    .contact-text
+    {
+        font-size: 16px;
+        padding-top: 3px;
+        margin-bottom: 15px;
+    }
+    .contact-image-container
+    {
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+}
+@media (min-width: 501px) and (max-width: 750px)
+{
+    .contact-text-heading
+    {
+        font-size: 20px;
+        padding-bottom: 2px;
+    }
+    .contact-text
+    {
+        font-size: 16px;
+        padding-top: 2px;
+    }
+}  
+@media (min-width: 751px) and (max-width: 999px)
+{
+    .contact-text-heading
+    {
+        font-size: 25px;
+        padding-bottom: 3px;
+    }
+    .contact-text
+    {
+        font-size: 20px;
+        padding-top: 3px;
+    }
+}
+@media (min-width: 1000px)
+{
+
+    .contact-text-heading
+    {
+        font-size: 30px;
+        padding-bottom: 5px;
+    }
+    .contact-text
+    {
+        font-size: 24px;
+        padding-top: 5px;
+    }
+}

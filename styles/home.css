@@ -1,0 +1,129 @@
+.hotel-description
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+    margin-bottom: 120px;
+    width: 1fr;
+    height: 50px;
+    color: snow;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.welcome-message
+{
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+.description
+{
+    text-align: center;
+    font-size: 30px;
+}
+
+.home-button-container
+{
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    justify-content: center;
+}
+
+.booking-button-link,.booking-button
+{
+    padding: 8px;
+    padding-left: 20px;
+    padding-top: 9px;
+    margin-right: 25px;
+    color: snow;
+    background-color: rgb(44, 79, 130);
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.booking-button-link:hover
+{
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+.booking-button-link:active
+{
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.location-button
+{
+    vertical-align: middle;
+    padding: 10px;
+    margin-left: 25px;
+    color: snow;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px;
+    border-color: snow;
+    border-style: solid;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.location-button:hover
+{
+    background-color: rgba(255, 255, 255, 0.151);
+    transition: background-color 0.2s;
+}
+.location-button:active
+{
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.2s;
+}
+.location-icon
+{
+    vertical-align: middle;
+    width: 20px;
+}
+
+.address
+{
+    position: absolute;
+    bottom: 0;
+    color: snow;
+}
+.contact
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: snow;
+    font-family: Arial;
+}
+
+@media (max-width: 400px)
+{
+    .welcome-message
+    {
+        font-size: 35px;
+    }
+    .description
+    {
+        font-size: 25px;
+    }
+    .address,.contact
+    {
+        font-size: 14px;
+    }
+}
+@media (min-width: 401px) and (max-width: 500px)
+{
+    .welcome-message
+    {
+        font-size: 40px;
+    }
+    .description
+    {
+        font-size: 30px;
+    }
+}

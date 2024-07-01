@@ -1,0 +1,121 @@
+body
+{
+    background: url("../images/background/home-background-image-1.jpg") no-repeat center center fixed;
+                /*url("../images/background/home-background-image-2.jpg");*/
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    transition: 15s;
+}
+
+
+.facilities-heading
+{
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.65);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.facilities
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.65);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.facilities-image-container
+{
+    width: 30%;
+    align-items: center;
+}
+.facilities-image
+{
+    max-width: 100%;
+    object-fit: cover;
+    size: 100%;
+}
+
+.facilities-text-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: middle;
+    margin-left: 10px; 
+    width: 60%;
+}
+.facilities-text-heading
+{
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+.facilities-text
+{
+    font-size: 40px;
+    font-family: Arial Narrow;
+    padding-top: 10px;
+}
+
+@media (max-width: 500px)
+{
+    .facilities-text-heading
+    {
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+    .facilities-text
+    {
+        font-size: 15px;
+        padding-top: 5px;
+    }
+}
+@media (min-width: 501px) and (max-width: 750px)
+{
+    .facilities-text-heading
+    {
+        font-size: 25px;
+        padding-bottom: 5px;
+    }
+    .facilities-text
+    {
+        font-size: 22px;
+        padding-top: 5px;
+    }
+}  
+@media (min-width: 751px) and (max-width: 999px)
+{
+    .facilities-text-heading
+    {
+        font-size: 30px;
+        padding-bottom: 7px;
+    }
+    .facilities-text
+    {
+        font-size: 27px;
+        padding-top: 7px;
+    }
+}
+@media (min-width: 1000px)
+{
+    .facilities-text-heading
+    {
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+    .facilities-text
+    {
+        font-size: 35px;
+        padding-top: 10px;
+    }
+}
