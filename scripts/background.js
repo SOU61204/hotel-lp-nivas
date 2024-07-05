@@ -4,8 +4,7 @@ const backgrounds = [
     'url("../images/background/home-background-image-3.jpg")'
 ];
 
-function nextBackground()
-{
+function nextBackground() {
     const bg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
     document.querySelector('body').style.background = bg + ' no-repeat center center fixed';
     document.querySelector('body').style.backgroundSize = 'cover';
