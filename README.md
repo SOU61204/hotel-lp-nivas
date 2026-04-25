@@ -1,0 +1,1 @@
+This is an interactive hotel website built using HTML, CSS and JavaScript. This is my first webdev project to get hands-on experience on HTML components like div, flexbox, grid and learn basic JavaScript.
