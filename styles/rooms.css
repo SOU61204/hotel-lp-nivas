@@ -1,66 +1,180 @@
-.rooms-heading
-{
-    margin-top: 80px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 20px;
+.rooms-heading {
+    margin: 80px 15px 20px;
     background-color: rgba(255, 255, 255, 0.65);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     text-align: center;
     font-size: 30px;
 }
-.rooms
-{
+
+/* Individual room section */
+.rooms {
     background-color: rgba(255, 255, 255, 0.65);
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    text-align: center;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 20px;
-    
+    margin: 15px;
+    padding: 0;
+    overflow: hidden;
 }
-.room-type
-{
-    margin-bottom: 15px;
+
+/* Layout */
+.room-layout {
+    display: flex;
+    min-height: 400px;
 }
-.room-images-container
-{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-left: 10px;
-    margin-right: 10px;
+
+/* Alternate layout */
+.room-layout.reverse {
+    flex-direction: row-reverse;
 }
-@media (max-width: 750px)
-{
-    .room-images-container
-    {
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-}  
-@media (min-width: 751px) and (max-width: 999px)
-{
-    .room-images-container
-    {
-        grid-template-columns: 1fr;
-        align-items: center;
-    }
+
+/* Left/Right halves */
+.room-images-container,
+.room-details {
+    width: 50%;
 }
-@media (min-width: 1000px)
-{
-    .room-images-container
-    {
-        grid-template-columns: 1fr 1fr;
-        justify-content: space-evenly;
-    }
+
+/* Image section */
+.room-images-container {
+    overflow: hidden;
 }
-.room-images
-{
+
+.room-images {
     width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Text section */
+.room-details {
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: Arial;
+    font-weight: normal;
+    text-align: left;
+}
+
+.room-details h2 {
+    margin: 0 0 15px 0;
+    font-size: 36px;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif
+}
+
+.room-details p {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.room-details ul {
+    margin: 0 0 25px 0;
+    padding-left: 25px;
+
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.room-details li {
+    margin-bottom: 8px;
+}
+
+.booking-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 25px;
+    gap: 20px;
+}
+
+.price-section {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(44, 79, 130);
+}
+
+.per-night {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Button */
+.book-btn {
+    padding: 14px 32px;
+
+    background-color: rgb(44, 79, 130);
+    color: white;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+    font-size: 18px;
+
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #004494;
+}
+.rooms-section{
+    padding-bottom: 20px;
+}
+
+.disclaimer{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: snow;
+}
+/* Mobile */
+@media (max-width: 768px) {
+
+    .room-layout,
+    .room-layout.reverse {
+        flex-direction: column;
+    }
+
+    .room-images-container,
+    .room-details {
+        width: 100%;
+    }
+
+    .room-images-container {
+        height: 250px;
+    }
+
+    .room-details {
+        padding: 25px;
+    }
+
+    .room-details h2 {
+        font-size: 28px;
+    }
+
+    .room-details p,
+    .room-details ul {
+        font-size: 18px;
+    }
+
+    .booking-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .book-btn {
+        text-align: center;
+    }
+
+    .price-section {
+        justify-content: center;
+    }
 }
