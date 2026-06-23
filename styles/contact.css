@@ -59,6 +59,27 @@
     object-fit: cover;
 }
 
+.background-slide {
+    position: fixed;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: opacity 2s ease-in-out;
+
+    z-index: -2;
+}
+
+#bg1 {
+    opacity: 1;
+}
+
+#bg2 {
+    opacity: 0;
+}
+
 @media (max-width: 500px)
 {
     .contact-section

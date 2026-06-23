@@ -1,15 +1,56 @@
+console.log("Slideshow script loaded");
+
 const backgrounds = [
-    'url("../images/background/home-background-image-1.jpg")',
-    'url("../images/background/home-background-image-2.jpg")',
-    'url("../images/background/home-background-image-3.jpg")'
+    'images/background/home-background-image-1.jpg',
+    'images/background/home-background-image-2.jpg',
+    'images/background/home-background-image-3.jpg',
+    'images/background/home-background-image-4.jpg',
+    'images/background/home-background-image-5.jpg',
+    'images/background/home-background-image-6.png'
 ];
 
+const bg1 = document.getElementById('bg1');
+const bg2 = document.getElementById('bg2');
+
+let currentImage =
+    Number(localStorage.getItem('currentBackground')) || 0;
+
+let showingFirst = true;
+
+bg1.style.backgroundImage =
+    `url("${backgrounds[currentImage]}")`;
+
 function nextBackground() {
-    const bg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-    document.querySelector('body').style.background = bg + ' no-repeat center center fixed';
-    document.querySelector('body').style.backgroundSize = 'cover';
-    document.querySelector('body').style.objectFit = 'cover';
-    document.querySelector('body').style.transition = '15s ease-in-out';
+    console.log("Changing background");
+
+    currentImage =
+        (currentImage + 1) % backgrounds.length;
+
+    localStorage.setItem(
+        'currentBackground',
+        currentImage
+    );
+
+    const nextImage = backgrounds[currentImage];
+
+    if (showingFirst) {
+
+        bg2.style.backgroundImage =
+            `url("${nextImage}")`;
+
+        bg2.style.opacity = 1;
+        bg1.style.opacity = 0;
+
+    } else {
+
+        bg1.style.backgroundImage =
+            `url("${nextImage}")`;
+
+        bg1.style.opacity = 1;
+        bg2.style.opacity = 0;
+    }
+
+    showingFirst = !showingFirst;
 }
 
-setInterval(nextBackground,20000);
+setInterval(nextBackground, 30000);
