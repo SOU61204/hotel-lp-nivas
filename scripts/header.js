@@ -5,7 +5,7 @@ const headerHTML = `
     </div>
 
     <div class="right-section">
-        <a class="header-element" href="home.html">
+        <a class="header-element" href="index.html">
             HOME
         </a>
 
